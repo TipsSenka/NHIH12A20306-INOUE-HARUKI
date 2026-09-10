@@ -3,4 +3,4 @@ main = "src/index.js"
 compatibility_date = "2025-01-01"
 
 [vars]
-ALLOWED_ORIGIN = "https://ih12a-inoueharuki.pages.dev"
+ALLOWED_ORIGINS = "https://ih12a-inoueharuki.pages.dev,https://nhih12a20306-inoue-haruki.gakkouyou0225.workers.dev"

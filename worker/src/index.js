@@ -28,8 +28,17 @@ const fortunes = ["大吉", "中吉", "小吉", "吉"];
 
 function getCorsHeaders(request, env) {
   const origin = request.headers.get("Origin");
-  const allowedOrigin = env.ALLOWED_ORIGIN || "http://localhost:5500";
-  const allowOrigin = origin === allowedOrigin ? origin : allowedOrigin;
+  const allowedOrigins = (
+    env.ALLOWED_ORIGINS ||
+    env.ALLOWED_ORIGIN ||
+    "http://localhost:5500"
+  )
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+  const allowOrigin = allowedOrigins.includes(origin)
+    ? origin
+    : allowedOrigins[0];
   return {
     "Access-Control-Allow-Origin": allowOrigin,
     "Access-Control-Allow-Methods": "GET, OPTIONS",
