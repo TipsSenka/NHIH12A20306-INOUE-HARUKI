@@ -16,7 +16,7 @@ npm run dev
 npm run deploy
 ```
 
-本番 Worker URL は `https://nhih12a20306-inoue-haruki-worker.gakkouyou0225.workers.dev` です。Pages の公開 URL を変更する場合は、`worker/wrangler.toml` の `ALLOWED_ORIGIN` も同じ URL に更新します。
+本番 Worker URL は `https://nhih12a20306-inoue-haruki-backend.gakkouyou0225.workers.dev` です。Pages の公開 URL を変更する場合は、`worker/wrangler.toml` の `ALLOWED_ORIGIN` も同じ URL に更新します。
 
 ## API 確認
 
